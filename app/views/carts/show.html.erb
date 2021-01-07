@@ -3,7 +3,7 @@
   <header class="page-header">
     <h1>My Cart</h1>
   </header>
-
+  <% if enhanced_cart.length >= 1 %>
   <div class="panel panel-default items">
     <table class="table table-bordered">
       <thead>
@@ -25,12 +25,13 @@
             TOTAL:
           </th>
           <th>
-            <%= cart_subtotal_cents / 100.0 %>
+            <%=humanized_money_with_symbol cart_subtotal_cents / 100.0 %>
           </th>
         </tr>
       </tfoot>
     </table>
   </div>
+
 
   <div class="row">
     <div class="col-xs-12">
@@ -48,5 +49,11 @@
       <% end %>
     </div>
   </div>
+  <% else %>
+    <div class = "alert alert-danger">
+      <h1>The cart is Empty, Please return to the home page</h1>
+      <%= link_to 'Back', root_path %> 
+    </div>
+  <% end %>
 
 </section>
