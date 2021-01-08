@@ -2,10 +2,32 @@
 
   <header class="page-header">
     <h1>Order #<%= @order.id %></h1>
+
   </header>
 
   <div class="order-summary jumbotron">
     <h4>Thank you for your order!</h4>
+
+    <% @order.line_items.each do |item| %>
+      <dt><%= item.product.name %> </dt>
+      <dd><%= image_tag item.product.image.tiny %> </dd>
+      <dd><%= item.product.description %> </dd>
+      <dd> Price: <%= humanized_money_with_symbol item.product.price %> </dd>
+      <dd> Quantity: <%= item.quantity %></dd>
+      <hr>
+    <% end %>
+    
+    <h5>
+    Your Email is
+    <span>
+    <%= @order.email %>
+    </span>
+    </h5>
+
+    <h5>
+    Total price for your items would be: 
+    <%= humanized_money_with_symbol @order.total_cents/ 100.0 %>
+    </h5>
   </div>
 
   <%= link_to "Continue Shopping", root_path, class: 'btn btn-lg btn-primary' %>
