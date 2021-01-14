@@ -14,11 +14,29 @@ A mini e-commerce application built with Rails 4.2 for purposes of teaching Rail
 7. Put Stripe (test) keys into appropriate .env vars
 8. Run `bin/rails s -b 0.0.0.0` to start the server
 
+
 ## Stripe Testing
 
 Use Credit Card # 4111 1111 1111 1111 for testing success scenarios.
 
 More information in their docs: <https://stripe.com/docs/testing#cards>
+
+## Final Product
+
+ **Admin**
+!["Admin"](https://github.com/WanjinYoo/JUNGLE/blob/master/images/Admin.png)
+  **Apparel**
+!["Apparel"](https://github.com/WanjinYoo/JUNGLE/blob/master/images/Apparel.png)
+ **Dashboard**
+!["Dashboard"](https://github.com/WanjinYoo/JUNGLE/blob/master/images/Dashboard.png)
+ **Mycart**
+!["Mycart"](https://github.com/WanjinYoo/JUNGLE/blob/master/images/Mycart.png)
+ **Products**
+!["Products"](https://github.com/WanjinYoo/JUNGLE/blob/master/images/Products.png)
+**Stripe**
+!["Stripe"](https://github.com/WanjinYoo/JUNGLE/blob/master/images/Stripe.png)
+
+
 
 ## Dependencies
 
